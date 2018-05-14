@@ -1,0 +1,13 @@
+
+<h2><%=@question%></h2>
+<h2><em>-You</em></h2>
+<% if @question == "I am going to work" %>
+<h2><%="Great!"%></h2>
+<%elsif @question.include? "?" %>
+<h2><%="Silly question, get dressed and go to work"%></h2>
+<%else%>
+<h2><%="I don't care, get dressed and get to work"%></h2>
+<h2><em><%="-Your coach"%></em></h2>
+<%end%>
+
+<%= link_to "Next Question", ask_path %>
